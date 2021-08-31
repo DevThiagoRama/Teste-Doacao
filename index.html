@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe Alimentos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <header>
+
+        <h1><strong>Doe Alimentos</strong> </h1>
+        <h2>Você Sabia?</h2>
+        <p>São 19 milhões de brasileiros em situação de fome no Brasil,
+            segundo dados de 2020 da Rede Brasileira de Pesquisa em Soberania e Segurança Alimentar e Nutricional
+            (Penssan). <br>
+            A comparação com 2018 (10,3 milhões) revela que são 9 milhões de pessoas a mais nessa condição.</p>
+            <input type="button" value="Quero Ajudar" onclick="clique()">
+    </header>
+
+    <section class="form hide">
+        <h2>Doar é um ato de amor!</h2>
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Nome Completo">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="celular" placeholder="Celular">
+            <button>Doe Agora</button>
+        </form>
+    </section>
+
+    <main>
+        <h2>Últimos Doadores</h2>
+        <section class="donors">
+
+            {% for donor in donors %}
+
+            <div class="donor">
+                <p>{{donor.name}}</p>
+            </div>
+
+            {%endfor%}
+
+        </section>
+    </main>
+
+    <footer><strong>Doe com ❤️ e ofereça um prato cheio de esperança!</strong></footer>
+
+    <script src="/script.js"></script>
+
+
+</body>
+
+</html>
